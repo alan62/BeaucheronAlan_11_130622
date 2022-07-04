@@ -1,0 +1,126 @@
+.Dropdown {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Dropdown .Dropdown__content {
+  display: none;
+}
+
+.Dropdown .Dropdown__trigger__icon {
+  transform: rotate(0deg);
+}
+
+.Dropdown--open .Dropdown__content {
+  display: flex;
+}
+
+.Dropdown--open .Dropdown__trigger__icon {
+  transform: rotate(180deg);
+}
+
+.Dropdown-trigger-and-label-container {
+  height: 1.870625rem;
+  padding-inline: 0.7rem 0.2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  display: flex;
+
+  background-color: rgb(var(--primary-color));
+  border-radius: 0.3125rem;
+}
+
+.Dropdown__label {
+  font-weight: 500;
+  font-size: var(--mobile-font-size-13px-in-rem);
+
+  color: rgb(var(--tertiary-color));
+}
+
+.Dropdown__trigger {
+  height: 1.2rem;
+  width: 1.2rem;
+  padding: 0;
+}
+
+.Dropdown__trigger__icon {
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+
+  transition: transform 0.3s ease-out;
+}
+
+.Dropdown__content {
+  margin-block: 0;
+  padding: 0.9rem 0.5rem 0.5rem 0.7rem;
+
+  flex-flow: column wrap;
+  flex: 1;
+
+  gap: 0.3rem 1rem;
+
+  font-size: var(--mobile-font-size-12px-in-rem);
+  line-height: 1.5;
+
+  background-color: rgb(var(--secondary-color));
+  border-radius: 0 0 5px 5px;
+}
+
+.Dropdown__content--empty {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .Dropdown {
+    width: 40%;
+  }
+}
+
+@media (min-width: 992px) {
+  .Dropdown {
+    width: 43%;
+  }
+
+  .Dropdown-trigger-and-label-container {
+    height: 3.25rem;
+    padding-inline: 1.25rem 0.25rem;
+    width: 100%;
+  }
+
+  .Dropdown__label {
+    font-size: var(--desktop-font-size-18px-in-rem);
+  }
+
+  .Dropdown__trigger {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .Dropdown__trigger__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .Dropdown__content {
+    min-height: 15.5625rem;
+    padding: 2.5rem 1.25rem 1.6875rem 0.75rem;
+
+    font-size: var(--desktop-font-size-18px-in-rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  .Dropdown {
+    width: 36.375rem;
+  }
+}
