@@ -1,0 +1,26 @@
+.Tag {
+  min-width: 5.25rem;
+  height: 1.125rem;
+  padding: 0.1875rem 1rem;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--mobile-font-size-10px-in-rem);
+  text-align: center;
+  text-transform: capitalize;
+
+  display: flex;
+
+  color: rgb(var(--tertiary-color));
+  background-color: rgb(var(--primary-color));
+  border-radius: 0.3125rem;
+}
+
+@media (min-width: 992px) {
+  .Tag {
+    min-width: 7.1875rem;
+    height: 1.5625rem;
+
+    font-size: var(--desktop-font-size-14px-in-rem);
+  }
+}

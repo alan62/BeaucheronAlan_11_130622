@@ -1,0 +1,51 @@
+.Rate-button-container {
+  width: 1.125rem;
+  height: 1.125rem;
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
+}
+
+.Rate-button {
+  width: inherit;
+  height: inherit;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
+
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+}
+
+.Rate-button__icon {
+  width: 0.875rem;
+  height: 0.875rem;
+
+  color: rgb(var(--unfilled-stars-color));
+}
+
+.Rate-button__icon--checked-state {
+  color: rgb(var(--primary-color));
+}
+
+@media (min-width: 992px) {
+  .Rate-button-container {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .Rate-button {
+    width: inherit;
+    height: inherit;
+  }
+
+  .Rate-button__icon {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
