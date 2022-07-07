@@ -1,0 +1,118 @@
+/* --- Default layout which as a mobile first approach --- */
+
+/* XS device layout : min-width 280px */
+
+.Header {
+  max-width: 335px;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Header__logo {
+  width: 9.0625rem;
+  height: 2.9375rem;
+}
+
+.Header__navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Header__navbar__item {
+  margin: var(--mobile-navlink-margin) 0;
+
+  font-size: var(--mobile-font-size-12px-in-rem);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: rgb(var(--primary-color));
+  opacity: 1;
+
+  transition: opacity 0.3s ease;
+}
+
+.Header__navbar__item:where(:hover, :active, :focus) {
+  opacity: 0.7;
+}
+
+.Header__navbar__item:first-of-type {
+  margin-right: var(--mobile-navlink-margin);
+}
+
+.Header__navbar__item:last-of-type {
+  margin-left: var(--mobile-navlink-margin);
+}
+
+.Header__navbar__item--current-page {
+  text-decoration: underline;
+}
+
+/* --- Responsive layout --- */
+
+/* Small + Medium device layout */
+
+@media (min-width: 335px) {
+  .Header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 500px) {
+  .Header {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 700px) {
+  .Header {
+    max-width: 580px;
+  }
+}
+
+/* Large and extra large device layout */
+
+@media (min-width: 810px) {
+  .Header {
+    max-width: 780px;
+  }
+}
+
+@media (min-width: 992px) {
+  .Header__logo {
+    height: 4.25rem;
+    width: 13.145rem;
+  }
+
+  .Header__navbar__item {
+    margin: var(--desktop-navlink-margin) 0;
+
+    font-size: var(--desktop-font-size-24px-in-rem);
+    text-transform: capitalize;
+  }
+
+  .Header__navbar__item:first-of-type {
+    margin-right: var(--desktop-navlink-margin);
+  }
+
+  .Header__navbar__item:last-of-type {
+    margin-left: var(--desktop-navlink-margin);
+  }
+}
+
+@media (min-width: 1024px) {
+  .Header {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .Header {
+    max-width: 1240px;
+  }
+}

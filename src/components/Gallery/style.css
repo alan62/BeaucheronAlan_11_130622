@@ -1,0 +1,19 @@
+.Gallery {
+  min-height: 21.25rem;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100%);
+  gap: 1.25rem 3.75rem;
+}
+
+@media (min-width: 500px) {
+  .Gallery {
+    padding: 56px 50px;
+
+    grid-template-columns: repeat(auto-fit, 21.25rem);
+    gap: 3.125rem 3.75rem;
+
+    background-color: rgb(var(--secondary-color));
+    border-radius: 25px;
+  }
+}

@@ -1,0 +1,7 @@
+.Rate {
+  margin: 0;
+  gap: 0.625em;
+
+  display: flex;
+  order: 0; /* Rating placement to the right of owner infos on mobile */
+}
