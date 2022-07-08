@@ -1,0 +1,98 @@
+/* Mobile first approach */
+
+.main-content-wrapper--about-page {
+  margin-block: 1.0625rem;
+}
+
+.About-page-main-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.1875rem;
+  width: 100%;
+}
+
+.About-page-main-content__kasa-values {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  width: 100%;
+}
+
+/* Banner style modifier */
+
+.Banner--about-page {
+  height: 13.9735rem;
+  margin-bottom: 0;
+}
+
+.Banner__background-image--about-page {
+  filter: brightness(95%);
+}
+
+.Banner__background-image--about-page img {
+  filter: brightness(80%);
+}
+
+/* Style on large mobile or on mobile in landscape mode */
+
+@media (min-width: 500px) {
+  .Dropdown--about-page {
+    width: 75%;
+  }
+}
+
+/* Style on tablette and more */
+
+@media (min-width: 992px) {
+  .About-page-main-content {
+    row-gap: var(--about-page-desktop-row-gap);
+  }
+
+  .About-page-main-content__kasa-values {
+    row-gap: var(--about-page-desktop-row-gap);
+  }
+
+  /* Dropdown style modifier */
+
+  .Dropdown-trigger-and-label-container--about-page {
+    height: 2.9375rem;
+    padding-right: 1rem;
+  }
+
+  .Dropdown__label--about-page {
+    font-size: var(--desktop-font-size-24px-in-rem);
+  }
+
+  .Dropdown__trigger--about-page {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  .Dropdown__trigger__icon--about-page {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+
+  .Dropdown__content--about-page {
+    min-height: auto;
+    padding-block: 1.5rem 0.8rem;
+    font-size: var(--desktop-font-size-24px-in-rem);
+  }
+}
+
+/* Style on desktop and more */
+
+@media (min-width: 1024px) {
+  .main-content-wrapper--about-page {
+    margin-block: 0 2.75rem;
+  }
+}
+
+/* Style on larges screen */
+
+@media (min-width: 1440px) {
+  .Dropdown--about-page {
+    width: 63.9375rem;
+  }
+}

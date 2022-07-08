@@ -1,0 +1,168 @@
+@import-normalize;
+
+/* CSS custom properties declaration */
+
+:root {
+  --primary-color: 255, 96, 96;
+  --secondary-color: 246, 246, 246;
+  --tertiary-color: 255, 255, 255;
+  --quaternary-color: 0, 0, 0;
+  --unfilled-stars-color: 227, 227, 227;
+  --placeholder-background: 196, 196, 196;
+
+  /* 
+    --desktop-font-size-288px-in-rem: 18rem; 404 text font size
+  */
+  --desktop-font-size-36px-in-rem: 2.25rem;
+  --desktop-font-size-48px-in-rem: 3rem;
+  --desktop-font-size-24px-in-rem: 1.5rem;
+  --desktop-font-size-18px-in-rem: 1.125rem;
+  --desktop-font-size-14px-in-rem: 0.875rem;
+
+  /* 
+    --mobile-font-size-96px-in-rem: 6rem; 404 text font size
+  */
+  --mobile-font-size-24px-in-rem: var(--desktop-font-size-24px-in-rem);
+  --mobile-font-size-18px-in-rem: var(--desktop-font-size-18px-in-rem);
+  --mobile-font-size-14px-in-rem: var(--desktop-font-size-14px-in-rem);
+  --mobile-font-size-13px-in-rem: 0.8125rem;
+  --mobile-font-size-12px-in-rem: 0.75rem;
+  --mobile-font-size-10px-in-rem: 0.625rem;
+
+  --desktop-navlink-margin: 3.5625rem;
+  --mobile-navlink-margin: 0.625rem;
+
+  --rounded-square: 0.625rem;
+  --circle: 50%;
+
+  --carousel-navigation-button-size: 1.5rem;
+
+  /* Row gap */
+
+  --about-page-desktop-row-gap: 2rem;
+}
+
+/* Fonts download */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 1 1000;
+  line-height: 1.5;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'),
+    url('./assets/fonts/static/Montserrat-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Medium'),
+    url('./assets/fonts/static/Montserrat-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Bold'),
+    url('./assets/fonts/static/Montserrat-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ---- Global style ---- */
+
+:where(*::after, *::before, *) {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--tertiary-color);
+}
+
+/* Static elements */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: rgb(var(--primary-color));
+}
+
+/* Interactive elements */
+
+a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+/* Main content */
+
+.main-content-wrapper {
+  max-width: 335px;
+  margin-inline: auto;
+}
+
+@media (min-width: 500px) {
+  .main-content-wrapper {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 700px) {
+  .main-content-wrapper {
+    max-width: 580px;
+  }
+}
+
+@media (min-width: 810px) {
+  .main-content-wrapper {
+    max-width: 780px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content-wrapper {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-content-wrapper {
+    max-width: 1240px;
+  }
+}
